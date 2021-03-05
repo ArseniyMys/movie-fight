@@ -1,0 +1,42 @@
+$color-primary: #240090;
+$color-primary-dark: #190061;
+$color-primary-light: #3500d3;
+
+$color-winner: 	#39CCCC;
+
+$color-secondary: #0c0032;
+
+$color-grey-1: #282828;
+$color-grey-2: #c0c0c0;
+
+$color-light: #fff;
+$color-dark: #000;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  color: $color-grey-2;
+}
+
+.container {
+  display: grid;
+  grid-template-columns:
+    1fr
+    repeat(6, minmax(min-content, 14rem))
+    1fr;
+  grid-template-rows: repeat(4, min-content);
+  grid-gap: 5rem;
+
+  background-color: $color-secondary;
+}

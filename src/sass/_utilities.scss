@@ -1,0 +1,16 @@
+.visible {
+  & {
+    opacity: 1 !important;
+  }
+  &-temp {
+    opacity: 1 !important;
+  }
+}
+
+.display-grid {
+  display: grid !important;
+}
+
+.max-height-15 {
+  max-height: 15rem !important;
+}

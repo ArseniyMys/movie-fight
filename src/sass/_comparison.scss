@@ -1,0 +1,65 @@
+.comparison {
+  grid-column: 1 / -1;
+  justify-self: center;
+
+  background-color: $color-primary-dark;
+  color: $color-light;
+  max-width: 100vw;
+  width: calc(90% - 10rem);
+  height: 40rem;
+  border-radius: 2rem;
+  overflow: scroll;
+
+  display: grid;
+  grid-template-columns: 12rem max-content repeat(10, minmax(20rem, max-content));
+  grid-template-rows: 4rem repeat(2, 17rem);
+  grid-gap: 1rem;
+
+  transition: all 1s 0.5s;
+  opacity: 0;
+  transform: scale(0);
+
+  p {
+    padding: 2rem;
+  }
+}
+
+.discipline {
+  &__empty {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+  }
+
+  &__name {
+    grid-row: 1 / 2;
+
+    background-color: $color-primary;
+    line-height: 2;
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  &__value {
+    background-color: $color-primary;
+    font-size: 1.7rem;
+  }
+
+  &--winner {
+    background-color: $color-winner;
+  }
+}
+
+.movie {
+  &__img {
+    grid-column: 1 / 2;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__name {
+    padding: 2rem;
+    background-color: $color-primary;
+  }
+}

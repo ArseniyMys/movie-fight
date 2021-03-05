@@ -1,0 +1,24 @@
+.header {
+  grid-column: 1 / -1;
+  grid-row: 1 / span 1;
+
+  padding: 5rem;
+  background-image: linear-gradient(to right, $color-grey-1 44%, $color-grey-2 100%);
+  border-bottom: 1px solid $color-grey-2;
+
+  display: grid;
+  grid-template-columns: max-content 1fr;
+
+  &__heading {
+    background-color: $color-primary;
+    line-height: 1.5;
+    padding: 1rem 10rem 1rem 1rem;
+  }
+
+  &__icon {
+    background-color: $color-primary;
+    height: 6.5rem;
+    width: 10rem;
+    fill: $color-grey-2;
+  }
+}

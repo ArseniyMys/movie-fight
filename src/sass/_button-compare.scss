@@ -1,0 +1,21 @@
+.button-compare {
+  grid-column: 4 / 6;
+  grid-row: 3 / span 1;
+
+  background-color: $color-primary;
+  transition: all 1s 0.5s;
+  border: 0;
+  border-radius: 10rem;
+  height: 4.8rem;
+  outline: none;
+  color: inherit;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+
+  transform: scale(0);
+  opacity: 0;
+
+  &:hover {
+    background-color: $color-primary-light;
+  }
+}

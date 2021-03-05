@@ -1,0 +1,8 @@
+node_modules
+package-lock.json
+src/css/style.comp.css
+src/css/style.prefix.css
+.DS_Store
+.prettierrc
+dist
+.parcel-cache
