@@ -2,7 +2,7 @@ $color-primary: #240090;
 $color-primary-dark: #190061;
 $color-primary-light: #3500d3;
 
-$color-winner: 	#39CCCC;
+$color-winner: #39cccc;
 
 $color-secondary: #0c0032;
 
@@ -11,6 +11,23 @@ $color-grey-2: #c0c0c0;
 
 $color-light: #fff;
 $color-dark: #000;
+
+$scrollbarBG: #3500d3;
+$thumbBG: #39cccc;
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == 800 {
+    @media only screen and (max-width: 50em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == 600 {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+}
 
 *,
 *::before,
@@ -23,6 +40,10 @@ $color-dark: #000;
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+
+  @include respond(800) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -35,7 +56,7 @@ body {
     1fr
     repeat(6, minmax(min-content, 14rem))
     1fr;
-  grid-template-rows: repeat(4, min-content);
+  grid-template-rows: repeat(5, min-content);
   grid-gap: 5rem;
 
   background-color: $color-secondary;

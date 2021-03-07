@@ -1,0 +1,22 @@
+.footer {
+  grid-column: 1 / -1;
+  background-color: $color-grey-1;
+  padding: 2rem;
+}
+
+.rules {
+  margin-left: 10%;
+
+  &__heading {
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+}

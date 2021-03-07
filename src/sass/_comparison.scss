@@ -11,13 +11,33 @@
   overflow: scroll;
 
   display: grid;
-  grid-template-columns: 12rem max-content repeat(10, minmax(20rem, max-content));
-  grid-template-rows: 4rem repeat(2, 17rem);
+  grid-template-columns: 12rem max-content repeat(
+      10,
+      minmax(20rem, max-content)
+    );
+  grid-template-rows: 4rem repeat(2, 16.25rem);
   grid-gap: 1rem;
 
+  &::-webkit-scrollbar {
+    height: 1.5rem;
+    width: 0;
+  }
+  &::-webkit-scrollbar-track {
+    background: $scrollbarBG;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $thumbBG;
+    border-radius: 6px;
+    border: 2px solid $scrollbarBG;
+  }
   transition: all 1s 0.5s;
   opacity: 0;
   transform: scale(0);
+
+  @include respond(600) {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 
   p {
     padding: 2rem;
